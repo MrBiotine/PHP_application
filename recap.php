@@ -25,15 +25,15 @@ session_start();
                         "<th>Quantité</th>",
                         "<th>Total</th>",
                     "</tr>",
-                "<thead>",
+                "</thead>",
             "<tbody>";
         $totalGeneral = 0; /* initialize a new var $totalGeneral a t zero */
         foreach($_SESSION['products'] as $index => $product){
             echo "<tr>",
                     "<td>".$index."</td>",
-                    "<td>"$product['name']."</td>",
+                    "<td>".$product['name']."</td>",
                     "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
-                    "<td>"$product['qtt']."</td>",
+                    "<td>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</td>",
                 "</tr>";
                 $totalGeneral += $product['total'] ;                      
@@ -42,7 +42,7 @@ session_start();
         echo "<tr>",
         
                 "<td colspan=4>Total général : </td>",/*colspan=4 => merge the first 4 columns  */
-                "<td><strong>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
+                "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
 
             "</tr>",
 
@@ -63,5 +63,6 @@ session_start();
         echo "</tbody>",
             "</table>";
     }
+    ?>
 </body>
 </html>
