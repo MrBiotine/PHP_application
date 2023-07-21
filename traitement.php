@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 /*check if the key "submit" exist*/
 if(isset($_POST['submit'])){
     /*we use a set of filters to filter, sanitize, validate the data*/
@@ -27,4 +29,6 @@ if(isset($_POST['submit'])){
 }
 /*else perform a redirect to index.php */
 header("Location:index.php");
+
+
 ?>

@@ -1,0 +1,129 @@
+/* Style pour le menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: #777;
+}
+
+/* Style pour l'en-tête */
+header {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+/* Style pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f5f5f5;
+    text-align: left;
+}
+/* Style pour le formulaire */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form p {
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Style pour le bouton Ajouter */
+
+#add-button {
+    padding: 10px 15px;
+    background-color: #d1d1d1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s, transform 0.2s; /* Ajout de la transition pour l'effet métallique */
+}
+
+#add-button:hover {
+    background-color: #b1b1b1;
+}
+
+#add-button:active {
+    transform: scale(0.95); /* Effet d'enfoncement lorsqu'il est cliqué */
+}
+/* Style pour le menu */
+.menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-right: 20px;
+}
+
+.menu-list li:last-child {
+    margin-right: 0;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.menu-list li a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Style pour le compteur de produits dans le panier */
+.cart-count {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    margin-left: 5px;
+}

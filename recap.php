@@ -1,16 +1,16 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Récapitulatif des produits</title>
 </head>
+  
 <body>
-    <?php
+   <?php 
+   include 'header.php' ;
     /*check if the key "products* does'nt exist or if it doesn't contain any data */
     if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {
         echo "<p>Aucun produit en session...</p>";        
@@ -24,6 +24,7 @@ session_start();
                         "<th>Prix</th>",
                         "<th>Quantité</th>",
                         "<th>Total</th>",
+                        "<th>Action</th>",
                     "</tr>",
                 "</thead>",
             "<tbody>";
@@ -35,6 +36,7 @@ session_start();
                     "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>",
                     "<td>".$product['qtt']."</td>",
                     "<td>".number_format($product['total'], 2, ",", "&nbsp;")."&nbsp;€</td>",
+                    "<td><a href=\"remove-product.php?delete=".$index."\">Supprimer</a></td>",
                 "</tr>";
                 $totalGeneral += $product['total'] ;                      
                              
@@ -43,8 +45,9 @@ session_start();
         
                 "<td colspan=4>Total général : </td>",/*colspan=4 => merge the first 4 columns  */
                 "<td><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
+                "<td><a href=\"remove-product.php?clear=1\">Supprimer tout</a></td>",
 
-            "</tr>",
+            "</tr>";
 
 
         /* The number_format() function in PHP is used to format a numeric value with grouped thousands and decimal separators. 
