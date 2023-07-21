@@ -11,7 +11,7 @@ function getCartItemCount() {
 <?php
 echo "<header>",
         "<nav>",
-            "<ul class='menu-list'>",
+            "<ul>",
                 "<li><a href='index.php'>Ajouter un produit</a></li>",
                 "<li>",
                     "<a href='recap.php'>Récapitulatif des produits</a>",

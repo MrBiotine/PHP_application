@@ -34,5 +34,20 @@
         </p>
 
     </form>
+    <div class="message-box">
+        <?php
+        // Display the success message if it exists in the session
+        if(isset($_SESSION['success_message'])) {
+            echo "<div class='success-message'>", $_SESSION['success_message'], "</div>";
+            unset($_SESSION['success_message']); // Clear the message after displaying
+        }
+
+        // Display the error message if it exists in the session
+        if(isset($_SESSION['error_message'])) {
+            echo "<div class='error-message'>", $_SESSION['error_message'], "</div>";
+            unset($_SESSION['error_message']); // Clear the message after displaying
+        }
+        ?>
+    </div>
 </body>
 </html>
