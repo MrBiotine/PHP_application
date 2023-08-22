@@ -135,7 +135,7 @@ form input[type="number"] {
     font-size: 1.1em;
 }
 .sucess-message {
-    border: #333 solid 2px;
+    border: #333 solid 1px;
     color: #333;
 }
 .error-message {
